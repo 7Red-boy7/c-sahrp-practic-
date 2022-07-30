@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practic
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            int num;
+            Console.Write("say youre name: ");
+            name = Console.ReadLine();
+            Console.Write("put number : ");
+            num = Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Hi " + name + " youre number is = " + num);
+
+            Console.ReadLine();
+        }
+    }
+}
