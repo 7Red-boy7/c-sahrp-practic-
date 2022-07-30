@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practic
+{
+    internal class Program
+    {
+        static int cube(int num)
+        {
+            int result;
+            result = num * num * num;
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("put number : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("cube number = " + cube(n));
+
+            Console.ReadLine();
+        }
+    }
+}
