@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practic
+{
+    internal class Program
+    {
+        static int GetMax(int num1, int num2)
+        {
+            int result;
+            if (num1 > num2)
+                result = num1;
+            else if (num1 < num2)
+                result = num2;
+            else
+                result = 0;
+            return result;
+
+           
+        }
+
+        static void Main(string[] args)
+        {
+            int n1, n2;
+            Console.WriteLine("put first  number : ");
+            n1 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("put second number : ");
+            n2 = Convert.ToInt16(Console.ReadLine());
+
+            if (GetMax(n1, n2) == n2)
+            {
+                Console.WriteLine(n1 + " < " + n2);
+            }
+            else if (GetMax(n1, n2) == n1)
+            {
+                Console.WriteLine(n1 + " > " + n2);
+            }
+            else
+            {
+                Console.WriteLine(n1 + " = " + n2);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
