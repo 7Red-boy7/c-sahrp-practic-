@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practic
+{
+    // creat class : class classname {}
+    class Car
+    {
+        public string brand;
+        public string name;
+        private string engin;
+        // creat static : public/private static dataname;
+        public static int carcount = 0;
+
+        // creat constructor : public/private classname {}
+        public Car(string abrand, string aname, string aengin) 
+        {
+            brand = abrand;
+            name = aname;
+            Engin = aengin;
+            carcount++;
+        }
+        // getter and setter .
+        public string Engin
+        {
+            get
+            {
+                return engin;
+            }
+            set
+            {
+                if (value == "V8" || value == "V12" || value == "V6" || value == "V16" || value == "NI")
+                {
+                    engin = value;
+                }
+                else
+                {
+                    engin = "invalid";
+                }
+            }
+        }
+        public int getcarcount()
+        {
+            return carcount;
+        }
+    }
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Car car1 = new Car("lambo", "aventador", "V12");
+            Console.WriteLine(car1.getcarcount());
+            Car car2 = new Car("Ford", "gt 500", "v8");
+            Console.WriteLine(car1.Engin);
+            Console.WriteLine(Car.carcount);
+
+            Console.ReadLine();
+        }
+    }
+}
